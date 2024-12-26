@@ -1,0 +1,155 @@
+@font-face {
+  font-family: Cooper;
+  src: url('/public/font/CooperLtBTWXXLight.woff2') format(truetype);
+}
+
+::selection {
+  background-color: #E6FDF4;
+  color: #00EB8F;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html,
+body{
+  width: 100%;
+  height: 100%;
+}
+
+.font{
+  font-family: font;
+  font-weight: 400;
+}
+
+.Cooper{
+  font-family: "Cooper", serif;
+}
+
+.link{
+  height: 27px;
+  position: relative;
+  transition: all;
+}
+
+.link1{
+  height: 34px;
+}
+
+.link::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: .5s;
+  width: 100%;
+  height: 2px;
+  background-color: #00EB8F;
+}
+
+.bg-image{
+  background-image: url(../public/images/bg-image.webp);
+  position: absolute;
+  filter: brightness(50%);
+}
+
+/* .bg-image::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: .5;
+  z-index: -1;
+} */
+  
+
+.link:hover::before{
+  opacity: 1;
+}
+
+.button{
+  position: relative;
+  overflow: hidden;
+}
+
+.button::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -330%;
+  width: 180.5px;
+  height: 100%;
+  background-color: #00EB8F;
+  z-index: -1;
+  transition: .7s;
+}
+
+.button:hover::before{
+  left: 0px;
+}
+
+.button-div{
+  cursor: pointer;
+}
+
+.button-div:hover .button::before{
+  left: 0;
+}
+
+.golfdiv .golf{
+  scale: 1;
+}
+
+.golfdiv:hover .golf{
+  scale: 1.2;
+}
+
+.divshadow{
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+}
+
+.animateService{
+  animation: animateService .5s forwards;
+  opacity: 0;
+  display: none;  
+}
+
+@keyframes animateService {
+  0%{
+    display: flex;
+    opacity: 1;
+  }
+  100%{
+    display: none;
+    opacity: 0;
+  }
+} 
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
